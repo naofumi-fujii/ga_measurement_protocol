@@ -1,8 +1,9 @@
 # GaMeasurementProtocol
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ga_measurement_protocol`. To experiment with that code, run `bin/console` for an interactive prompt.
+Api client for Google Analytics Measurement Protocol in Ruby
 
-TODO: Delete this and the text above, and describe your gem
+Measurement Protocol の概要  |  アナリティクス Measurement Protocol  |  Google Developers
+https://developers.google.com/analytics/devguides/collection/protocol/v1/?hl=ja
 
 ## Installation
 
