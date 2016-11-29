@@ -6,7 +6,8 @@ module GaMeasurementProtocol
   # Your code goes here...
   class Client
     attr_reader :conn
-    def initialize
+    def initialize(debug: false)
+      @debug = debug
       url =
         'https://www.google-analytics.com'
 
@@ -18,7 +19,16 @@ module GaMeasurementProtocol
     end
 
     def post(request)
-      JSON.parse(conn.post('/debug/collect', request).body)
+      url = if debug?
+              '/debug/collect'
+            else
+              '/collect'
+            end
+      JSON.parse(conn.post(url, request).body)
+    end
+
+    def debug?
+      @debug
     end
   end
 end

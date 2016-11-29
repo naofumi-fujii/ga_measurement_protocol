@@ -6,12 +6,12 @@ describe GaMeasurementProtocol do
   end
 
   describe 'Client' do
+    let(:client) { GaMeasurementProtocol::Client.new(debug: true) }
     describe 'get'
 
     describe '#post' do
       subject { client.post(request) }
 
-      let(:client) { GaMeasurementProtocol::Client.new }
       let(:request) do
         {
           tid: 'tid',
