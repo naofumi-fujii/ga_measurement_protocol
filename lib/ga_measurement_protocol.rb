@@ -3,7 +3,6 @@ require 'faraday'
 require 'json'
 
 module GaMeasurementProtocol
-  # Your code goes here...
   class Client
     attr_reader :conn
     def initialize(debug: false)
